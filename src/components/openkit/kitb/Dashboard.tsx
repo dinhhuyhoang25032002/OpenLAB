@@ -48,10 +48,8 @@ const Dashboard = ({
               device={<DHT11Sensor />}
               id="dht4"
               nameDevice={"DHT11"}
-              value1={"27*C"}
-              value2={"70%"}
+              value1={temperature}
               icon1={<FaThermometerHalf />}
-              icon2={<IoSnowSharp />}
             />
           </div>
 
@@ -59,6 +57,7 @@ const Dashboard = ({
             dataX={timestamps}
             dataY={temperatureHistory}
             value={temperature}
+            nameChart="Temperature"
           />
         </div>
         <div className="w-[23%] flex items-center justify-center flex-col shadow-xl bg-white px-6 py-6 rounded">
@@ -67,17 +66,16 @@ const Dashboard = ({
               device={<DHT11Sensor />}
               id="dht3"
               nameDevice={"DHT11"}
-              value1={"27*C"}
-              value2={"70%"}
-              icon1={<FaThermometerHalf />}
-              icon2={<IoSnowSharp />}
+              value1={humidity}
+              icon1={<IoSnowSharp />}
             />
           </div>
 
           <DashboardChart
             dataX={timestamps}
-            dataY={temperatureHistory}
-            value={temperature}
+            dataY={humidityHistory}
+            value={humidity}
+            nameChart="Humidy"
           />
         </div>
         <div className="w-[23%] flex items-center justify-center flex-col shadow-xl bg-white px-6 py-6 rounded">
@@ -86,15 +84,16 @@ const Dashboard = ({
               device={<MQ02Sensor />}
               id="mq2"
               nameDevice={"MQ02"}
-              value1={"2700"}
+              value1={gas}
               icon1={<GiGasPump />}
             />
           </div>
 
           <DashboardChart
             dataX={timestamps}
-            dataY={temperatureHistory}
-            value={temperature}
+            dataY={gasHistory}
+            value={gas}
+            nameChart="Gas"
           />
         </div>
         <div className="w-[23%] flex items-center justify-center flex-col shadow-xl bg-white px-6 py-6 rounded">
@@ -103,32 +102,19 @@ const Dashboard = ({
               device={<MHSensor />}
               id="mh"
               nameDevice={"MH"}
-              value1={"274"}
+              value1={light}
               icon1={<LuSunMedium />}
             />
           </div>
 
           <DashboardChart
             dataX={timestamps}
-            dataY={temperatureHistory}
-            value={temperature}
+            dataY={lightHistory}
+            value={light}
+            nameChart="Light"
           />
         </div>
       </div>
-      {/* <div className="flex items-center justify-between  w-full ">
-        <div className="w-[23%] flex items-center justify-center ">
-          <DashboardChart />
-        </div>
-        <div className="w-[23%] flex items-center justify-center ">
-          <DashboardChart />
-        </div>
-        <div className="w-[23%] flex items-center justify-center">
-          <DashboardChart />
-        </div>
-        <div className="w-[23%] flex items-center justify-center">
-          <DashboardChart />
-        </div>
-      </div> */}
     </div>
   );
 };
