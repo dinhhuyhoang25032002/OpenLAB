@@ -10,18 +10,22 @@ const InputPassword = ({
   onBlur,
   value,
   onChange,
+  name,
+  id,
   className,
+  placeholder,title
 }: InputPasswordProps) => {
   const [isShowPassword, setIsShowPassword] = useState(false);
   return (
     <div className="flex flex-col w-full ">
-      <label htmlFor="password">Mật khẩu</label>
+      <label htmlFor="password">{title}</label>
       <div className="relative w-full ">
         <input
           type={isShowPassword === true ? "text" : "password"}
-          name="password"
-          id="password"
+          name={name}
+          id={id}
           onBlur={onBlur}
+          placeholder={placeholder}
           value={value}
           onChange={onChange}
           className={`${className} w-full`}

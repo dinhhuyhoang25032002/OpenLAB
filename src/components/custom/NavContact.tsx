@@ -7,17 +7,17 @@ import "./NavContact.scss";
 const NavContact = () => {
   return (
     <div
-      className="flex  justify-between items-center px-14 py-1 bg-gradient-to-r from-[#080541] from-0% via-[#090979] via-58% to-[#06044a] to-100% text-white
-    xs:flex-col xs:px-0
+      className="flex  justify-between items-center lg:px-2 py-1 bg-gradient-to-r from-[#080541] from-0% via-[#090979] via-58% to-[#06044a] to-100% text-white
+    xs:flex-col xs:px-0 xl:px-0
     "
     >
-      <div className="flex">
+      <div className="flex 2xl:w-[25%] 2xl:justify-center xl:w-[25%] xl:justify-center">
         <span className="flex gap-1 items-center">
           <GrMail />
           openlab.user@gmail.com
         </span>
       </div>
-      <div className="flex  gap-2 items-center">
+      <div className="flex  gap-2 items-center 2xl:w-[26%] 2xl:justify-center xl:w-[25%] xl:justify-center lg:w-[23%] lg:justify-center">
         <div className="flag-container w-[46px] h-[46px] flex gap-2 justify-center items-center">
           <div>
             <img

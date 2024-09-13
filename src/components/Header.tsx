@@ -1,14 +1,27 @@
-
 import { FaAngleDown } from "react-icons/fa6";
 import { Tooltip } from "react-tooltip";
 import "./Header.scss";
 import { Link } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import { useState } from "react";
+
 import { HiXMark } from "react-icons/hi2";
+import {
+  Command,
+
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+ 
+} from "@/components/ui/command";
+
+import { RxAvatar } from "react-icons/rx";
 const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-
+  const isAuth = true;
   return (
     <div className="body-header flex flex-col  shadow-xl sticky top-0 z-10 bg-white">
       <div className="flex bg-blue-50 justify-around py-3 sm:py-0 xs:py-0">
@@ -263,6 +276,20 @@ const Header = () => {
                 </Link>
               </div>
             </Tooltip>
+            <Link
+              to="/login"
+              className=" sm:w-full xs:w-full lg:hidden xl:hidden 2xl:hidden"
+            >
+              <span
+                className="cursor-pointer hover:text-[#1464cc] flex items-center gap-0.5 sm:pl-3 sm:border-b-[1px] sm:justify-between  xs:pl-3  xs:border-b-[1px] xs:justify-between"
+                data-tooltip-id="my-blog"
+              >
+                <span className=" sm:py-1 ">Khóa học</span>
+                <div className="sm:px-4 sm:py-2 sm:border-l-[1px] xs:px-3 xs:py-2 xs:border-l-[1px]">
+                  <FaAngleDown className="text-xs  icon-product " />
+                </div>
+              </span>
+            </Link>
             <Link to="/contact" className=" sm:w-full xs:w-full ">
               <span className="cursor-pointer hover:text-[#1464cc] flex sm:pl-3 xs:pl-3">
                 Liên hệ
@@ -271,19 +298,64 @@ const Header = () => {
           </div>
         </div>
         <div
-          className="content-right w-[25%] flex items-center text-lg font-medium pl-5 justify-center gap-6 sm:hidden xs:hidden
+          className="content-right w-[25%] flex items-center text-lg font-medium pl-5 justify-center gap-6 sm:hidden xs:hidden 
       "
         >
-          <div className=" flex items-center justify-start gap-6  ">
-            <Link to={"/login"}>
-              <button
-                className="px-5 py-2 rounded text-white bg-[#D32F2F] hover:transition-colors hover:duration-200 hover:ease-out hover:bg-[#1513be] shadow-2xl shadow-[#7A9598]
-              "
+          {isAuth === true ? (
+            <>
+              <div
+                className="flex justify-center items-center gap-2 cursor-pointer  "
+                data-tooltip-id="my-profile"
               >
-                Đăng ký khoá học
-              </button>
-            </Link>
-          </div>
+                Hello Admin! <RxAvatar className="cursor-pointer " />
+              </div>
+              <Tooltip
+                id="my-profile"
+                clickable
+                variant="light"
+                place="bottom-end"
+                delayHide={100}
+              >
+                <Command>
+                  <CommandInput placeholder="Type a command or search..." />
+                  <CommandList>
+                    <CommandEmpty>No results found.</CommandEmpty>
+                    {/* <CommandGroup heading="Suggestions">
+                      <CommandItem>
+                    
+                        <span className="flex items-center gap-2">
+                          <CiCalendar />
+                          Calendar
+                        </span>
+                      </CommandItem>
+                      <CommandItem>Search Emoji</CommandItem>
+                      <CommandItem>Calculator</CommandItem>
+                    </CommandGroup> */}
+                    <CommandSeparator />
+                    <CommandGroup heading="Settings">
+                      <CommandItem className="flex items-center gap-2"> <RxAvatar className="cursor-pointer " />Thông tin cá nhân</CommandItem>
+                    
+                    <Link to ='/product/search-course'>
+                    <CommandItem>Thông tin khóa học</CommandItem>
+                    </Link> 
+                      <CommandItem>Đăng xuất</CommandItem>
+                    </CommandGroup>
+                  </CommandList>
+                </Command>
+              </Tooltip>
+            </>
+          ) : (
+            <div className=" flex items-center justify-start gap-6  ">
+              <Link to={"/login"}>
+                <button
+                  className="px-5 py-2 rounded text-white bg-[#D32F2F] hover:transition-colors hover:duration-200 hover:ease-out hover:bg-[#1513be] shadow-2xl shadow-[#7A9598]
+              "
+                >
+                  Đăng ký khoá học
+                </button>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>

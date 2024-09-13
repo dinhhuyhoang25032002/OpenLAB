@@ -31,9 +31,125 @@ import imageSolution5 from "@/assets/image/solution/solution6.jpg";
 import imagekitb from "@/assets/image/about/activity_insite/a2061c9029a98ef7d7b8.jpg";
 import imagesmart from "@/assets/image/kit-device/5881145d3b989cc6c589.jpg";
 import imageC from "@/assets/image/kit-device/97203ac8160db153e81c.jpg";
-import smartnetwork from '@/assets/image/kit-device/d0d56d0b43cee490bddf.jpg'
-import hubcenter from '@/assets/image/kit-device/c67c96025dc7fa99a3d6.jpg'
+import smartnetwork from "@/assets/image/kit-device/d0d56d0b43cee490bddf.jpg";
+import hubcenter from "@/assets/image/kit-device/c67c96025dc7fa99a3d6.jpg";
 import axiosPublic from "@/config/axiosConfig";
+
+import GNBIOT from "@/assets/image/product/course/5g/2cb3448bf23755690c26.jpg";
+import LTGPS from "@/assets/image/product/course/5g/69bf79e2c65e6100384f.jpg";
+import WSN from "@/assets/image/product/course/5g/d1447db7b40b13554a1a.jpg";
+
+import AIvsIOT from "@/assets/image/product/course/ai-ml/0e4ce4245298f5c6ac89.jpg";
+import ROS from "@/assets/image/product/course/ai-ml/6b8fb71607aaa0f4f9bb.jpg";
+import deepLearningC from "@/assets/image/product/course/ai-ml/54a025e99755300b6944.jpg";
+import AIorML from "@/assets/image/product/course/ai-ml/67ed350bf8b75fe906a6.jpg";
+import ArduinovsRaspherry from "@/assets/image/product/course/ai-ml/341874e5b8591f074648.jpg";
+import Chatbot from "@/assets/image/product/course/ai-ml/dd05cff47e48d9168059 (1).jpg";
+
+import cloud from "@/assets/image/product/course/cloud/d2a7c8d47968de368779.jpg";
+
+import OOPArduino from "@/assets/image/product/course/data-anali/14b9bf6d0fd1a88ff1c0.jpg";
+import IoTPython from "@/assets/image/product/course/data-anali/76c479c1c87d6f23366c.jpg";
+import IOTPowerBI from "@/assets/image/product/course/data-anali/b638d4d01b6cbc32e57d.jpg";
+import PythonVsRaspherryPi from "@/assets/image/product/course/data-anali/de7a3bf0f64c5112085d.jpg";
+
+import ESP8266vsDrone from "@/assets/image/product/course/drone-uav/a086cfb87c04db5a8215.jpg";
+
+import STM32vsSIM800 from "@/assets/image/product/course/ltiot/0ea2897c41c0e69ebfd1.jpg";
+import EEGvsArduino from "@/assets/image/product/course/ltiot/3e762463eedf498110ce.jpg";
+import ltnIOtvsArduino from "@/assets/image/product/course/ltiot/7bd69332548ef3d0aa9f.jpg";
+import IotvsESP32 from "@/assets/image/product/course/ltiot/025ce29e5122f67caf33.jpg";
+import ESP32CAM from "@/assets/image/product/course/ltiot/27aa03a7cc1b6b45320a.jpg";
+import ltGithub from "@/assets/image/product/course/ltiot/56bf3d82f43e53600a2f.jpg";
+import STM32vsRTOS from "@/assets/image/product/course/ltiot/91ddefdc2a608d3ed471.jpg";
+import LTAvsPID from "@/assets/image/product/course/ltiot/667f42c1f67d5123086c.jpg";
+import RFvsESP8266 from "@/assets/image/product/course/ltiot/83323259fae55dbb04f4.jpg";
+import ECGvsArduino from "@/assets/image/product/course/ltiot/b3ae871b4da7eaf9b3b6 (2).jpg";
+import smarthomevsESP32CAM from "@/assets/image/product/course/ltiot/e8f74895872920777938.jpg";
+import MLvsESP32CAM from "@/assets/image/product/course/ltiot/ef4e7b03b1bf16e14fae.jpg";
+import IOTvsSTM32 from "@/assets/image/product/course/ltiot/f17df15135ed92b3cbfc.jpg";
+import designIotCircuit from "@/assets/image/product/course/ltiot/fb542a76e7ca409419db (1).jpg";
+
+type courseInforProps = {
+  image: string;
+  nameCourse: string;
+  price: string;
+  id?: string | number;
+};
+
+export const courseInfor5G: courseInforProps[] = [
+  { image: GNBIOT, nameCourse: "Thực hành mạng 5G NB IoT", price: "500.000" },
+  {
+    image: LTGPS,
+    nameCourse: "Lập trình GPS tracking system với Raspherry Pi",
+    price: "500.000",
+  },
+  {
+    image: WSN,
+    nameCourse: "Lập trình Mạng cảm biến WSN với Raspherry Pi",
+    price: "500.000",
+  },
+];
+
+export const courseInforAI: courseInforProps[] = [
+  {
+    image: AIvsIOT,
+    nameCourse: "Tích hợp AI vào sản phẩm IoT",
+    price: "800.000",
+  },
+  { image: ROS, nameCourse: "Thực hành lập trình robotics", price: "500.000" },
+  {
+    image: deepLearningC,
+    nameCourse: "Thực hành lập trình deep learning với C",
+    price: "500.000",
+  },
+  {
+    image: AIorML,
+    nameCourse: "Thực hành lập trình Python AI/ML cơ bản ",
+    price: "500.000",
+  },
+  {
+    image: ArduinovsRaspherry,
+    nameCourse: "Thực hành lập trình ứng dụng Arduino+Raspherry PI ",
+    price: "500.000",
+  },
+  {
+    image: Chatbot,
+    nameCourse: "Thực hành lập trình phát triển Chatbot AI ",
+    price: "500.000",
+  },
+];
+
+export const courseInforCloud: courseInforProps[] = [
+  { image: cloud, nameCourse: "Thực hành thiết kế AWS Iot server", price: "500.000" },
+];
+
+export const courseInforDataAnalyst :courseInforProps[]=[
+  { image: OOPArduino, nameCourse: "Thực hành mạng OOP với Arduino", price: "500.000" },
+  { image: IoTPython, nameCourse: "Thực hành trực quan hóa dữ liệu IoT với Python", price: "500.000" },
+  { image: IOTPowerBI, nameCourse: "Lập trình phân tích dữ liệu IoT với Power BI", price: "500.000" },
+  { image: PythonVsRaspherryPi, nameCourse: "Thực hành lập trình Python với Raspherry", price: "500.000" },
+]
+export const courseInforDronevsUav:courseInforProps[]=[
+  { image: ESP8266vsDrone, nameCourse: "Thực hành lập trình drone với ESP 8266", price: "500.000" },
+]
+
+export const courseInforLTN :courseInforProps[]=[
+  { image: STM32vsSIM800, nameCourse: "Thực hành lập trình STM32+SIM800", price: "500.000" },
+  { image: EEGvsArduino, nameCourse: "Thực hành tín hiệu EEG với Arduino", price: "500.000" },
+  { image: ltnIOtvsArduino, nameCourse: "Thực hành lập trình nhúng Iot với Arduino cơ bản + nâng cao", price: "500.000" },
+  { image: IotvsESP32, nameCourse: "Thực hành lập trình nhúng Iot với ESP32", price: "500.000" },
+  { image: ESP32CAM, nameCourse: "Thực hành xe tự hành với ESP 32 CAM", price: "500.000" },
+  { image: ltGithub, nameCourse: "Thực hành lập trình với GitHub", price: "500.000" },
+  { image: STM32vsRTOS, nameCourse: "Thực hành lập trình STM 32 với RTOS", price: "500.000" },
+  { image: LTAvsPID, nameCourse: "Thực hành lập trình ứng dụng với PID", price: "500.000" },
+  { image: RFvsESP8266, nameCourse: "Thực hành lập trình remote RF với ESP 8266", price: "500.000" },
+  { image: ECGvsArduino, nameCourse: "Phân tích tín hiệu ECG với Arduino", price: "500.000" },
+  { image: smarthomevsESP32CAM, nameCourse: "Lập trình smart home với ESP32CAM", price: "500.000" },
+  { image: MLvsESP32CAM, nameCourse: "Object Detection(ML) với ESP32CAM", price: "500.000" },
+  { image: IOTvsSTM32, nameCourse: "Thực hành lập trình nhúng IoT với STM32", price: "500.000" },
+  { image: designIotCircuit, nameCourse: "Thực hành thiết kế mạch IoT", price: "500.000" },
+]
 export type productType = {
   image: string;
   nameProduct: string;

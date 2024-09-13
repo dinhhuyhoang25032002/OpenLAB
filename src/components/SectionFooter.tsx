@@ -9,7 +9,7 @@ import { AiFillTikTok } from "react-icons/ai";
 import logoZalo from "@/assets/logo/contact/Icon_of_Zalo.svg";
 const SectionFooter = () => {
   return (
-    <div className="body-section-footer bg-gradient-to-r from-[#080541] from-0% via-[#090979] via-58% to-[#06044a] to-100% px-20 py-14 border-t-2 border-[#48d6e9] lg:px-10 xs:px-10">
+    <div className="body-section-footer bg-gradient-to-r from-[#080541] from-0% via-[#090979] via-58% to-[#06044a] to-100% px-20 py-14 border-t-2 border-[#48d6e9] lg:px-10 xs:px-10 xl:px-14">
       <div className="content-section-footer">
         <div className="flex text-white justify-around px-5 lg:px-0 sm:flex-col sm:gap-8 xs:flex-col xs:gap-6 xs:px-0">
           <div className="flex w-[62%] justify-between lg:w-[56%] sm:w-full xs:w-full xs:flex-col xs:gap-6">
@@ -17,11 +17,11 @@ const SectionFooter = () => {
               <div>
                 <Logo color="white" />
                 <div className="flex flex-col gap-8">
-                  <p className=" mt-3 lg:text-sm text-base font-normal text-white flex flex-col">
-                    <span className="uppercase font-semibold xs:text-sm xs:mb-3">
-                      Công ty cổ phần công nghệ OpenLab
+                  <p className=" mt-3 lg:text-sm text-base font-normal text-white flex flex-col 2xl:gap-2 xl:gap-2 ">
+                    <span className=" font-semibold xs:text-sm xs:mb-3 2xl:w-[80%] xl:w-[100%]">
+                      CÔNG TY CỔ PHẦN CÔNG NGHỆ OpenLAB
                     </span>
-                    <span className="text-sm text-justify">
+                    <span className="text-sm text-justify  2xl:w-[78%] xl:w-[90%]">
                       Đơn vị phát triển những giải pháp toàn diện nhằm nâng cao
                       chất lượng của công tác thí nghiệm thực hành trong các
                       trường Đại học
@@ -70,8 +70,8 @@ const SectionFooter = () => {
               </div>
             </div>
           </div>
-          <div className="flex w-[38%] justify-between lg:w-[42%] sm:w-full xs:w-full  xs:flex-col xs:justify-between xs:gap-6">
-            <div className="w-[24%]  flex flex-col text-base font-normal text-white gap-3 lg:text-sm xs:w-full xs:flex-col">
+          <div className="flex w-[38%] justify-between lg:w-[42%] sm:w-full xs:w-full  xs:flex-col xs:justify-between xs:gap-6 ">
+            <div className="w-[24%]  flex flex-col text-base font-normal text-white gap-3 lg:text-sm xs:w-full xs:flex-col 2xl:w-[40%] xl:w-[40%]">
               <span className="text-lg font-semibold text-white mb-2 lg:text-sm xs:mb-0">
                 Khám phá
               </span>
@@ -98,8 +98,8 @@ const SectionFooter = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[73%] flex flex-col justify-between lg:text-sm text-base font-medium text-white xs:w-full xs:gap-6 ">
-              <div className="gap-3 flex flex-col">
+            <div className="w-[73%] flex flex-col justify-between lg:text-sm text-base font-medium text-white xs:w-full xs:gap-6 2xl:w-[56%] xl:w-[56%] 2xl:items-start">
+              <div className="gap-3 flex flex-col ">
                 <span className="text-lg font-semibold text-white mb-2 lg:text-sm xs:mb-0">
                   Dịch vụ
                 </span>
@@ -119,7 +119,7 @@ const SectionFooter = () => {
                   Khóa học thực hành trực tuyến
                 </span>
               </div>
-              <div className="flex justify-end items-center text-4xl rounded sm:hidden gap-7 lg:pr-8 lg:mt-6 xs:px-8 xs xs:justify-around">
+              <div className="flex justify-end items-center text-4xl rounded sm:hidden gap-7 lg:pr-8 lg:mt-6 xs:px-8 xs xs:justify-around  xl:justify-start">
                 <div className="bg-white rounded-md">
                   <FaFacebookSquare className="text-[#1877f2]" />
                 </div>

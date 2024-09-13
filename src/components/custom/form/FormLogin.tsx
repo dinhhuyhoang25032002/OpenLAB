@@ -4,8 +4,9 @@ import { FaFacebook } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa6";
 import InputPassword from "@/components/custom/element/InputPassword";
-import { handleLogin } from "@/services/data";
-import { REGEX } from "@/config/constant";
+// import { handleLogin } from "@/services/data";
+import { Link, Navigate } from "react-router-dom";
+// import { REGEX } from "@/config/constant";
 const FormLogin = () => {
   const formik = useFormik({
     initialValues: {
@@ -26,14 +27,17 @@ const FormLogin = () => {
         .required("Mật khẩu không được để trống"),
     }),
     onSubmit: async ({ email, password }) => {
+      <Link to="/" replace={true} />;
       console.log("Sending to request!", email, password);
-      const res = await handleLogin(email, password);
-      console.log(res);
+
+      // const res = await handleLogin(email, password);
+      // console.log(res);
     },
   });
 
   return (
     <form
+      noValidate
       className="flex flex-col gap-3 w-full items-center   "
       action="POST"
       onSubmit={formik.handleSubmit}
@@ -50,6 +54,7 @@ const FormLogin = () => {
             type="email"
             name="email"
             id="email"
+            placeholder="Tên tải khoản"
             onBlur={formik.handleBlur}
             value={formik.values.email}
             onChange={formik.handleChange}
@@ -68,8 +73,10 @@ const FormLogin = () => {
         <InputPassword
           name="password"
           id="password"
+          placeholder="Mật khẩu"
           onBlur={formik.handleBlur}
           onChange={formik.handleChange}
+          title="Mật khẩu"
           value={formik.values.password}
           className={
             formik.errors.password && formik.touched.password
@@ -87,13 +94,14 @@ const FormLogin = () => {
       <div className=" flex justify-end items-center  w-full">
         <span className="text-xs font-medium text-end  ">Quên mật khẩu</span>
       </div>
-
-      <button
-        className="py-2 bg-blue-700 rounded text-white w-full"
-        type="submit"
-      >
-        Đăng nhập
-      </button>
+      <Link to="/" replace={true} className="w-full">
+        <button
+          className="py-2 bg-blue-700 rounded text-white w-full"
+          type="submit"
+        >
+          Đăng nhập
+        </button>
+      </Link>
 
       <div className=" text-center  w-full">
         <span className="">Đăng nhập bằng</span>

@@ -13,6 +13,7 @@ const LazyPricesPage = lazy(() => import("@/container/products/PricesPage"));
 const LazyOpenKitBPage = lazy(
   () => import("@/container/openkit/kitb/OpenKitBPage")
 );
+const LazySearchCourse = lazy(()=> import("@/container/products/course/SearchCourse"))
 const LazyAllProduct = lazy(() => import("@/container/products/AllProduct"));
 const LazyLoginPage = lazy(() => import("@/container/LoginPage"));
 const LazyDetailProduct = lazy(
@@ -112,6 +113,16 @@ const App = () => {
               </Suspense>
             }
           />
+           <Route
+            path="search-course"
+            element={
+              <Suspense fallback={<FallbackLoading />}>
+                <MainLayout>
+                  <LazySearchCourse />
+                </MainLayout>
+              </Suspense>
+            }
+          />
           <Route
             path=":slug"
             element={
@@ -133,6 +144,9 @@ const App = () => {
             }
           />
         </Route>
+
+
+
         <Route
           path="openkit-b/dashboard"
           element={

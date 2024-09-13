@@ -114,7 +114,7 @@ const SectionServices = () => {
                     <span className="text-base font-semibold">
                       {item.title}
                     </span>
-                    <p className="text-sm px-7 font-normal text-justify">
+                    <p className="text-sm px-2 font-normal text-justify">
                       {item.description}
                     </p>
                   </div>

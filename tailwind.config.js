@@ -12,14 +12,14 @@ export default {
       },
       sm: {
         min: "576px",
-        max: "976px",
+        max: "776px",
       },
       lg: {
-        min: "977px",
-        max: "1276px",
+        min: "777px",
+        max: "1247px",
       },
       xl: {
-        min: "1278px",
+        min: "1248px",
         max: "1576px",
       },
       "2xl": {

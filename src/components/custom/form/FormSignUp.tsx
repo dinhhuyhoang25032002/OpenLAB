@@ -34,7 +34,7 @@ const FormSignUp = () => {
   });
 
   return (
-    <form
+    <form noValidate
       className="flex flex-col gap-4 w-full items-center   "
       action="POST"
       onSubmit={formik.handleSubmit}
@@ -50,6 +50,7 @@ const FormSignUp = () => {
           <input
             type="text"
             name="name"
+            placeholder="Họ và tên"
             id="name"
             onBlur={formik.handleBlur}
             value={formik.values.name}
@@ -72,6 +73,7 @@ const FormSignUp = () => {
           <input
             type="email"
             name="email"
+            placeholder="Email"
             id="email"
             onBlur={formik.handleBlur}
             value={formik.values.email}
@@ -92,6 +94,8 @@ const FormSignUp = () => {
           name="password"
           id="password"
           onBlur={formik.handleBlur}
+          placeholder="Mật khẩu"
+           title="Mật khẩu"
           value={formik.values.password}
           onChange={formik.handleChange}
           className={
@@ -107,8 +111,10 @@ const FormSignUp = () => {
         )}
 
         <InputPassword
-          name="password"
-          id="password"
+          name="confirmPassword"
+          id="confirmPassword"
+           title="Nhập lại mật khẩu"
+          placeholder="Nhập lại mật khẩu"
           onBlur={formik.handleBlur}
           value={formik.values.confirmPassword}
           onChange={formik.handleChange}
