@@ -89,6 +89,11 @@ export const courseInfor5G: courseInforProps[] = [
     nameCourse: "Lập trình Mạng cảm biến WSN với Raspherry Pi",
     price: "500.000",
   },
+  {
+    image: WSN,
+    nameCourse: "Lập trình Mạng cảm biến WSN với Raspherry Pi",
+    price: "500.000",
+  },
 ];
 
 export const courseInforAI: courseInforProps[] = [
@@ -118,9 +123,22 @@ export const courseInforAI: courseInforProps[] = [
     nameCourse: "Thực hành lập trình phát triển Chatbot AI ",
     price: "500.000",
   },
+  {
+    image: Chatbot,
+    nameCourse: "Thực hành lập trình phát triển Chatbot AI ",
+    price: "500.000",
+  },
+  {
+    image: Chatbot,
+    nameCourse: "Thực hành lập trình phát triển Chatbot AI ",
+    price: "500.000",
+  },
 ];
 
 export const courseInforCloud: courseInforProps[] = [
+  { image: cloud, nameCourse: "Thực hành thiết kế AWS Iot server", price: "500.000" },
+  { image: cloud, nameCourse: "Thực hành thiết kế AWS Iot server", price: "500.000" },
+  { image: cloud, nameCourse: "Thực hành thiết kế AWS Iot server", price: "500.000" },
   { image: cloud, nameCourse: "Thực hành thiết kế AWS Iot server", price: "500.000" },
 ];
 
@@ -131,6 +149,9 @@ export const courseInforDataAnalyst :courseInforProps[]=[
   { image: PythonVsRaspherryPi, nameCourse: "Thực hành lập trình Python với Raspherry", price: "500.000" },
 ]
 export const courseInforDronevsUav:courseInforProps[]=[
+  { image: ESP8266vsDrone, nameCourse: "Thực hành lập trình drone với ESP 8266", price: "500.000" },
+  { image: ESP8266vsDrone, nameCourse: "Thực hành lập trình drone với ESP 8266", price: "500.000" },
+  { image: ESP8266vsDrone, nameCourse: "Thực hành lập trình drone với ESP 8266", price: "500.000" },
   { image: ESP8266vsDrone, nameCourse: "Thực hành lập trình drone với ESP 8266", price: "500.000" },
 ]
 
@@ -147,6 +168,8 @@ export const courseInforLTN :courseInforProps[]=[
   { image: ECGvsArduino, nameCourse: "Phân tích tín hiệu ECG với Arduino", price: "500.000" },
   { image: smarthomevsESP32CAM, nameCourse: "Lập trình smart home với ESP32CAM", price: "500.000" },
   { image: MLvsESP32CAM, nameCourse: "Object Detection(ML) với ESP32CAM", price: "500.000" },
+  { image: IOTvsSTM32, nameCourse: "Thực hành lập trình nhúng IoT với STM32", price: "500.000" },
+  { image: designIotCircuit, nameCourse: "Thực hành thiết kế mạch IoT", price: "500.000" },
   { image: IOTvsSTM32, nameCourse: "Thực hành lập trình nhúng IoT với STM32", price: "500.000" },
   { image: designIotCircuit, nameCourse: "Thực hành thiết kế mạch IoT", price: "500.000" },
 ]

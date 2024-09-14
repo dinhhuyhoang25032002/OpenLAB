@@ -15,7 +15,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
- 
+
 } from "@/components/ui/command";
 
 import { RxAvatar } from "react-icons/rx";
@@ -58,12 +58,11 @@ const Header = () => {
           <div
             className={`w-8/12 sm:flex-col xs:flex-col  xs:inline-flex flex text-lg font-medium justify-around items-center sm:justify-start sm:items-start xs:justify-start xs:items-start
               sm:bg-[#080544] xs:bg-[#080544] sm:text-[#1464cc] xs:text-[#1464cc]  sm:absolute xs:absolute sm:duration-200 xs:duration-200 sm:h-screen 
-              xs:h-screen xs:right-0 xs:top-0 sm:right-0 sm:top-0 sm:transition-all xs:transition-all sm:ease-in xs:ease-in  ${
-                isOpenMenu
-                  ? "sm:w-1/3 sm:z-20 xs:w-[45%] xs:z-20 "
-                  : "sm:w-0 sm:opacity-100 sm:z-0 xs:w-0 xs:opacity-100 xs:z-0 "
+              xs:h-screen xs:right-0 xs:top-0 sm:right-0 sm:top-0 sm:transition-all xs:transition-all sm:ease-in xs:ease-in  ${isOpenMenu
+                ? "sm:w-1/3 sm:z-20 xs:w-[45%] xs:z-20 "
+                : "sm:w-0 sm:opacity-100 sm:z-0 xs:w-0 xs:opacity-100 xs:z-0 "
               }`}
-            //  data-aos="zoom-out"
+          //  data-aos="zoom-out"
           >
             <div
               onClick={() => setIsOpenMenu(!isOpenMenu)}
@@ -106,7 +105,7 @@ const Header = () => {
               variant="light"
               place="bottom-start"
               delayHide={100}
-              // events={["click"]}
+            // events={["click"]}
             >
               <div className="option-product text-base bg-[#1464cc] rounded shadow-xl px-5 py-5 font-normal text-black flex xs:gap-0 gap-4 flex-col xs:px-2 xs:py-2">
                 <div className="flex gap-4 xs:flex-col xs:gap-1">
@@ -192,10 +191,10 @@ const Header = () => {
                       <span className="font-semibold">Báo giá</span>
                       <div className=" flex flex-col gap-4 xs:hidden">
                         <span className="hover:text-[#1464cc]">
-                          Giải pháp/Phần mềm
+                          Giải pháp/Dịch vụ
                         </span>
                         <span className="hover:text-[#1464cc]">
-                          Phần cứng/Kít thực hành thông minh
+                          Thiết bị/Kít 
                         </span>
                         <span className="hover:text-[#1464cc]">
                           Khoá học thực hành
@@ -246,7 +245,7 @@ const Header = () => {
               variant="light"
               place="bottom-end"
               delayHide={100}
-              //  events={["click"]}
+            //  events={["click"]}
             >
               <div className="option-blog text-base  py-1 px-0 font-normal text-black opacity-100">
                 <div className="courses  hover:text-[#1464cc] rounded-sm cursor-pointer pl-2 py-0.5">
@@ -334,10 +333,13 @@ const Header = () => {
                     <CommandSeparator />
                     <CommandGroup heading="Settings">
                       <CommandItem className="flex items-center gap-2"> <RxAvatar className="cursor-pointer " />Thông tin cá nhân</CommandItem>
-                    
-                    <Link to ='/product/search-course'>
-                    <CommandItem>Thông tin khóa học</CommandItem>
-                    </Link> 
+
+                      <Link to='/product/search-course'>
+                        <CommandItem>Thông tin khóa học</CommandItem>
+                      </Link>
+                      <Link to='/product/search-kit'>
+                        <CommandItem>Thông tin Thiết bị/Kit</CommandItem>
+                      </Link>
                       <CommandItem>Đăng xuất</CommandItem>
                     </CommandGroup>
                   </CommandList>

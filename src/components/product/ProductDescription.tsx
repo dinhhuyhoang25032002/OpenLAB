@@ -8,7 +8,7 @@ import { FaStarHalfAlt } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
 type ProductDescriptionProps = {
   srcImg: string;
-  typeApp: string;
+  typeApp?: string;
   nameProduct: string;
   description: string;
   id?: string | number;
@@ -26,7 +26,7 @@ const ProductDescription = ({
         <img
           src={srcImg}
           alt="image-product-section"
-          className="w-full h-48 object-center object-fill border-[#8AD9E4] border-2 rounded xs:h-48"
+          className="w-full h-56 object-center object-fill border-[#8AD9E4] border-2 rounded xs:h-48"
         />
         <div className="flex justify-end items-center  absolute w-full h-full  top-0 left-0 opacity-0 hover:opacity-100 ">
           <Link

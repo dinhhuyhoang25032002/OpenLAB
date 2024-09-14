@@ -13,7 +13,8 @@ const LazyPricesPage = lazy(() => import("@/container/products/PricesPage"));
 const LazyOpenKitBPage = lazy(
   () => import("@/container/openkit/kitb/OpenKitBPage")
 );
-const LazySearchCourse = lazy(()=> import("@/container/products/course/SearchCourse"))
+const LazySearchCourse = lazy(() => import("@/container/products/course/SearchCourse"))
+const LazySearchKit = lazy(() => import("@/container/products/kit/SearchKit"))
 const LazyAllProduct = lazy(() => import("@/container/products/AllProduct"));
 const LazyLoginPage = lazy(() => import("@/container/LoginPage"));
 const LazyDetailProduct = lazy(
@@ -113,12 +114,22 @@ const App = () => {
               </Suspense>
             }
           />
-           <Route
+          <Route
             path="search-course"
             element={
               <Suspense fallback={<FallbackLoading />}>
                 <MainLayout>
                   <LazySearchCourse />
+                </MainLayout>
+              </Suspense>
+            }
+          />
+          <Route
+            path="search-kit"
+            element={
+              <Suspense fallback={<FallbackLoading />}>
+                <MainLayout>
+                  <LazySearchKit />
                 </MainLayout>
               </Suspense>
             }
